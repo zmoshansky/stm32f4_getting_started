@@ -20,7 +20,7 @@ Note - On a linux host, you may have to add yourself to the group "vboxusers" be
 
 ```
 $ sudo yum update
-$ sudo yum install automake make gcc kernel-headers kernel-devel libusb-devel glibc.i686 screen nano wget
+$ sudo yum install automake make gcc kernel-headers kernel-devel libusb-devel glibc.i686 screen nano wget telnet
 $ sudo yum groupinstall "Development Tools"
 ```
 
