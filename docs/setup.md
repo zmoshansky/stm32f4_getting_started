@@ -175,7 +175,7 @@ stm32f4_usb_cdc.bin  stm32f4_usb_cdc.elf  stm32f4_usb_cdc.hex
 ### Flashing the code to the STM32F4
 Connect a USB A to USB Mini B cable from target board port CN1 to the PC and a USB A to USB Micro B cable from target board port CN5 port to the PC. Next open two terminal windows, in the first we will run the OpenOCD "server". One thing to keep in mind, is that when you run telnet commands in the next step, they will be relative to where you ran openocd from.
 ```
-$ sudo openocd -f board/stm32f4discovery.cfg
+$ openocd -f board/stm32f4discovery.cfg
 ```
 
 And in the second window, connect to openOCD and flash the code.
