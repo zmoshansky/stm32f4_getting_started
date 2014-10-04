@@ -20,15 +20,23 @@ Note - On a linux host, you may have to add yourself to the group "vboxusers" be
 
 ```
 $ sudo yum update
-$ sudo yum install automake make gcc kernel-headers libusb-devel glibc.i686 screen
+$ sudo yum install automake make gcc kernel-headers kernel-devel libusb-devel glibc.i686 screen nano wget
 $ sudo yum groupinstall "Development Tools"
 ```
 
+kernel-headers kernel-devel | VBOX Guest Additions
 libusb-devel | openOCD
 glibc.i686 | arm-none-eabi
 screen | connect to serial port
 
+----------
+## Install Virtual Box Guest Additions
 
+reboot if you haven't
+```
+$ cd /run/media/BEST/VBOXADDITIONS*
+$ sudo ./VBoxLinuxAdditions.run
+```
 ----------
 ### Installing the GCC ARM Cross Compiling Toolchain
 
@@ -118,8 +126,8 @@ $ make installcheck
 #### Enabling permissions for USB
 To run openocd without root, we add a rule to udev and reload it.
 ```
-$ echo 'ATTRS{idProduct}=="3748", ATTRS{idVendor}=="0483", MODE="666"' | sudo tee /etc/udev/rules.d/91-openocd.rules`
-$ sudo udevadm control --reload-rules
+$ echo 'ATTRS{idProduct}=="3748", ATTRS{idVendor}=="0483", MODE="666"' | sudo tee /etc/udev/rules.d/91-openocd.rules
+$ sudo udevadm trigger
 ```
 
 With the STM32f4 board plugged in, You should now be able to run the following:
