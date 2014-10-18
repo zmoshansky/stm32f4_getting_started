@@ -2,8 +2,7 @@
  The following is a guide created to help my software team on [UBC's Biomedical Engineering Student Team](http://best.ece.ubc.ca) to target and develop for the STM32F4 Discovery board.
 
 ----------
-## Configuring VirtualBox
-(Skip this step if you're doing a native install)
+## Configuring VirtualBox (VM Only)
 
  1. Enable USB 2.0 (EHCI in VirtualBox, Requires Vbox extension)
  2. Add a USB device (filter) for STlink programmer(if some characters show up as garbage, just delete them)
@@ -30,7 +29,7 @@ glibc.i686 | arm-none-eabi
 screen | connect to serial port
 
 ----------
-## Install Virtual Box Guest Additions
+## Install Virtual Box Guest Additions (VM Only)
 
 reboot if you haven't
 ```
