@@ -60,3 +60,5 @@ Once the device is flashed and reset, it shows up as a /dev/ttyACM0 device if yo
 ```
 $ sudo screen /dev/ttyACM0
 ```
+
+Expect to see data from the microcontroller being output to the screen. As an exercise, compare the output to what the project source code says it should output to determine correctness.
