@@ -13,7 +13,7 @@ Confidentiality: no one can encrypt, Integrity: same thing, Authenticity: sent b
 
 Ssh keys: terminal sent over the internet 
 ECE: username@server_name 
-Command: $ ssh –P y09wa@ssh.ece.ubc.ca
+Command: $ ssh –P 1234user_name@ssh.ece.ubc.ca
 
 Scp secure copy files:
 
@@ -25,7 +25,7 @@ drwx: directory read write execute
 
 git clone : not branching but copying 
 git pull –all : to get all the code 
-git fetch –all : everything that has been changes, lists of all branches from master
+git fetch –all : everything that has been changed, lists of all branches from master
 
 git log : shows all changes (history) 
 git branch lists branches
