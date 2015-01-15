@@ -95,7 +95,7 @@ $ cd openocd-0.8.0
 $ ./configure
 ```
 
-This is what you want, "yes" for ST-Link, after running configure... (May need to install `libusb` otherwise and try again).
+This is what you want, "yes" for ST-Link, after running configure... (May need to install `libusb-devel` or `libusb` otherwise and try again).
 ```
 OpenOCD configuration summary
 --------------------------------------------------
