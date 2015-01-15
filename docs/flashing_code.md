@@ -38,8 +38,8 @@ Info : stm32f4x.cpu: hardware has 6 breakpoints, 4 watchpoints
 And in a second window, connect to OpenOCD and flash the code. In this case (vedder's) [demo](http://vedder.se/2012/07/usb-serial-on-stm32f4/) code.
 ```
 $ telnet localhost 4444
-$ flash write_image erase build/stm32f4_usb_cdc.bin 0x8000000
-$ reset
+> flash write_image erase build/stm32f4_usb_cdc.bin 0x8000000
+> reset
 ```
 
 If you receive the following error:

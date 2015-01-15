@@ -180,8 +180,8 @@ $ openocd -f board/stm32f4discovery.cfg
 And in the second window, connect to openOCD and flash the code.
 ```
 $ telnet localhost 4444
-$ flash write_image erase build/stm32f4_usb_cdc.bin 0x8000000
-$ reset
+> flash write_image erase build/stm32f4_usb_cdc.bin 0x8000000
+> reset
 ```
 
 ### Viewing the results
