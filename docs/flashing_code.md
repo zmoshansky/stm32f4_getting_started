@@ -38,21 +38,9 @@ Info : stm32f4x.cpu: hardware has 6 breakpoints, 4 watchpoints
 And in a second window, connect to OpenOCD and flash the code. In this case (vedder's) [demo](http://vedder.se/2012/07/usb-serial-on-stm32f4/) code.
 ```
 $ telnet localhost 4444
+> reset halt
 > flash write_image erase build/stm32f4_usb_cdc.bin 0x8000000
 > reset
-```
-
-If you receive the following error:
-```
-target not halted
-```
-Run the following commands through `arm-none-eabi-gdb` to halt the controller:
-```
-$ arm-none-eabi-gdb
-> set remote hardware-breakpoint-limit 6
-> set remote hardware-watchpoint-limit 4
-> target extended-remote :3333
-> monitor reset halt
 ```
 
 ### Viewing the results
